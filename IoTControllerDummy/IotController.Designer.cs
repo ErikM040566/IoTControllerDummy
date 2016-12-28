@@ -96,7 +96,7 @@
             this.txtHelpText.Name = "txtHelpText";
             this.txtHelpText.Size = new System.Drawing.Size(294, 203);
             this.txtHelpText.TabIndex = 3;
-            this.txtHelpText.Text = "\nLegg inn en leveringsId i feltet over og trykk \"Lever\"";
+            this.txtHelpText.Text = "\nLegg inn en leveringsKode i feltet over og trykk \"Lever\"";
             // 
             // btnDeliver
             // 
@@ -238,7 +238,7 @@
             this.btnDoorSwitch.Name = "btnDoorSwitch";
             this.btnDoorSwitch.Size = new System.Drawing.Size(75, 23);
             this.btnDoorSwitch.TabIndex = 11;
-            this.btnDoorSwitch.Text = "Dørbryter";
+            this.btnDoorSwitch.Text = "Lukk døra";
             this.btnDoorSwitch.UseVisualStyleBackColor = true;
             this.btnDoorSwitch.Click += new System.EventHandler(this.btnDoorSwitch_Click);
             // 

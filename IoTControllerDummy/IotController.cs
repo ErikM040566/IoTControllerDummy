@@ -24,7 +24,7 @@ namespace IoTControllerDummy
             tabControl.SelectTab(tabDeliver);
             btnDoorSwitch.BackColor = Color.Gray;
             txtDeliveryId.Text = "";
-            txtHelpText.Text = "\nLegg inn en leveringsId i feltet over og trykk \"Lever\"";
+            txtHelpText.Text = "\nLegg inn en leveringsKode i feltet over og trykk \"Lever\"";
             chkMainLock.Checked = true;
             chkWeight.Checked = false;
             chkCamera.Checked = false;
@@ -41,7 +41,7 @@ namespace IoTControllerDummy
             if(txtDeliveryId.TextLength < 2)
             {
                
-                txtHelpText.Text = "\nDu må legge inn en leveringsId";
+                txtHelpText.Text = "\nDu må legge inn en leveringsKode";
                 return;
             }
 
@@ -58,7 +58,7 @@ namespace IoTControllerDummy
             Console.Beep();
             chkWeight.Checked = true;
             timerSimulateAddPackage.Enabled = false;
-            txtHelpText.Text = "\nLukk døren og vent på kvittering\n\nKlikk på 'Dørbryter'";
+            txtHelpText.Text = "\nLukk døren og vent på kvittering\n\nKlikk på 'Lukk døra'";
             btnDoorSwitch.BackColor = Color.Red;
         }
 
@@ -80,10 +80,11 @@ namespace IoTControllerDummy
 
         private void timerSendLogEntry_Tick(object sender, EventArgs e)
         {
+            Console.Beep();
             timerSendLogEntry.Enabled = false;
 
             var guid = Guid.NewGuid();
-            txtHelpText.Text = "\nDin kvitteringskode for leveringsid: " + txtDeliveryId.Text + "\n\ner: " + guid.ToString() + "\n\nTa bilde av skjermen for din kvittering.";
+            txtHelpText.Text = "\nDin kvitteringskode for leveringsKode: " + txtDeliveryId.Text + "\n\ner: " + guid.ToString() + "\n\nTa bilde av skjermen for din kvittering.";
         }
 
     }
